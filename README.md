@@ -2,7 +2,7 @@
 
 Nexus Arcade is a full-stack Web3 application that bridges the gap between traditional off-chain gaming and decentralized on-chain economies. It features a bi-directional Ethereum-pegged economy where players can securely purchase arcade chips using Sepolia ETH, play games without paying gas fees, and cash out their winnings back to their digital wallets.
 
-## 🌟 Key Features
+## Key Features
 
 * Purchase chips with ETH and withdraw chips back to ETH using a secure smart contract vault.
 * Cash-outs are secured by a Node.js Oracle that verifies off-chain SQLite balances before signing and executing on-chain Ethereum transactions.
@@ -10,7 +10,7 @@ Nexus Arcade is a full-stack Web3 application that bridges the gap between tradi
 * Players can purchase 30-day VIP passes via smart contract to unlock premium features, such as the Daily Scratch-Offs.
 * Seamless integration with MetaMask using `ethers.js` (v6).
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Frontend:** React.js, HTML5 Canvas (Pong), CSS3
 * **Backend:** Node.js, Express.js
@@ -20,7 +20,7 @@ Nexus Arcade is a full-stack Web3 application that bridges the gap between tradi
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 The application utilizes a hybrid Web2/Web3 architecture:
 
@@ -43,3 +43,15 @@ The application utilizes a hybrid Web2/Web3 architecture:
 3. Deploy the contract to Sepolia:
    ```bash
    npx hardhat run scripts/deploy.js --network sepolia
+
+## How to Run 
+**Terminal 1: Start the Backend**
+This boots the server that verifies the database and signs Web3 transactions.
+cd backend
+node server.js
+
+**Terminal 2: Start the Backend**
+cd frontend
+npm start
+
+Ensure both ports are set to public
