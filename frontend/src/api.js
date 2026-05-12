@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.REACT_APP_API_URL || "https://supreme-space-fishstick-jjqg7qp995rqhqx7x-5000.app.github.dev/api";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://four80-nexus-arcade.onrender.com";
 
 /**
  * Standardized utility for executing HTTP requests with JSON payloads.

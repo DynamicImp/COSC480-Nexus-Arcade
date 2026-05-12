@@ -44,7 +44,6 @@ const App = () => {
     localStorage.removeItem('arcadeUser');
   };
 
-  // FIX 2: Real-time Data Sync
   // Update specific user attributes (like chips) and keep LocalStorage in sync
   const handleUpdateUser = (updatedData) => {
     const newUserState = { ...user, ...updatedData };
