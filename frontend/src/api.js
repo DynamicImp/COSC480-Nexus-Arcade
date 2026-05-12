@@ -42,13 +42,13 @@ async function fetchWithJson(endpoint, options = {}) {
 
 export const authAPI = {
   register: (userData) => 
-    fetchWithJson('/auth/register', {
+    fetchWithJson('/api/auth/register', {
       method: 'POST',
       body: JSON.stringify(userData),
     }),
 
   login: (credentials) => 
-    fetchWithJson('/auth/login', {
+    fetchWithJson('/api/auth/login', {
       method: 'POST',
       body: JSON.stringify(credentials),
     }),
@@ -56,32 +56,32 @@ export const authAPI = {
 
 export const gameAPI = {
   recordMatch: (matchData) => 
-    fetchWithJson('/games/record', {
+    fetchWithJson('/api/games/record', {
       method: 'POST',
       body: JSON.stringify(matchData),
     }),
 
   getHistory: (userId) => 
-    fetchWithJson(`/games/history/${userId}`, {
+    fetchWithJson(`/api/games/history/${userId}`, {
       method: 'GET',
     }),
 };
 
 export const chipAPI = {
   purchase: (purchaseData) => 
-    fetchWithJson('/chips/purchase', {
+    fetchWithJson('/api/chips/purchase', {
       method: 'POST',
       body: JSON.stringify(purchaseData),
     }),
 
   sell: (sellData) => 
-    fetchWithJson('/chips/sell', {
+    fetchWithJson('/api/chips/sell', {
       method: 'POST',
       body: JSON.stringify(sellData),
     }),
 
   claimDailyReward: (userId) => 
-    fetchWithJson('/chips/daily-reward', {
+    fetchWithJson('/api/chips/daily-reward', {
       method: 'POST',
       body: JSON.stringify({ userId }),
     }),
